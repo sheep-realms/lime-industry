@@ -1,0 +1,5 @@
+{
+    "scripts": {
+        "build-index": "python build-index.py"
+    }
+}

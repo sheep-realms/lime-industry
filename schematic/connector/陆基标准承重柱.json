@@ -1,0 +1,28 @@
+{
+    "title": "陆基标准承重柱",
+    "path": "connector/陆基标准承重柱",
+    "cover": "",
+    "attribute": {},
+    "tags": ["connector"],
+    "specifications": [
+        {
+            "name": "甲型-基段",
+            "image_src": "",
+            "attribute": {
+                "size": [5, 5, 5]
+            }
+        }, {
+            "name": "甲型-中段",
+            "image_src": "",
+            "attribute": {
+                "size": [3, 5, 3]
+            }
+        }, {
+            "name": "甲型-顶段",
+            "image_src": "",
+            "attribute": {
+                "size": [5, 5, 5]
+            }
+        }
+    ]
+}
