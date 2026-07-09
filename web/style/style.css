@@ -74,7 +74,7 @@ hr {
 .container {
     max-width: 1000px;
     margin: 0 auto;
-    padding-bottom: 35vh;
+    padding-bottom: 32px;
 }
 
 h1 {
@@ -192,6 +192,10 @@ button.outlined:hover,
     color: var(--color-button-filled-text);
 }
 
+button:active {
+    filter: brightness(0.9);
+}
+
 button:disabled {
     pointer-events: none;
 }
@@ -271,5 +275,20 @@ button:disabled {
 }
 
 .footer-hr {
-    margin-top: 16px;
+    margin-top: 32px;
+}
+
+footer {
+    text-align: center;
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    padding-top: 32px;
+}
+
+footer a {
+    color: var(--color-text-secondary);
+}
+
+footer a:hover {
+    color: var(--color-text-regular);
 }
