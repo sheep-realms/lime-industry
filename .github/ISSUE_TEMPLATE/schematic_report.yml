@@ -1,0 +1,20 @@
+name: 蓝图反馈
+description: 对蓝图提交建议和反馈
+title: "[蓝图反馈] "
+labels: ["蓝图反馈"]
+body:
+  - type: input
+    id: schematic-name
+    attributes:
+      label: 蓝图名称
+      description: 您需要反馈的蓝图名称。
+      placeholder: 例如：柱式风力机
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: 这个蓝图有什么问题？
+      description: 请描述一下您在使用该蓝图的过程中遇到了什么问题，以便我们作出改进。
+    validations:
+      required: true
