@@ -4,10 +4,6 @@
         "sort_name": "1",
         "title": "设备"
     }, {
-        "name": "plugin",
-        "sort_name": "2",
-        "title": "插件"
-    }, {
         "name": "connector",
         "sort_name": "3",
         "title": "连接件"

@@ -1,0 +1,68 @@
+{
+    "title": "柱式风力机",
+    "path": "equipment/柱式风力机",
+    "attribute": {},
+    "tags": ["equipment", "stress_source", "wind_stress"],
+    "icon": "柱式风力机-甲型_150px.png",
+    "cover": "柱式风力机-甲型.png",
+    "gallery": [],
+    "specifications": [
+        {
+            "name": "甲型",
+            "image_src": "柱式风力机-甲型.png",
+            "readme": "",
+            "attribute": {
+                "size": [7, 22, 7]
+            }
+        }, {
+            "name": "甲型-锁链传动",
+            "image_src": "柱式风力机-甲型-锁链传动.png",
+            "readme": "甲型-锁链传动",
+            "attribute": {
+                "size": [7, 29, 7]
+            }
+        }, {
+            "name": "甲型-锁链传动升级插件",
+            "image_src": "柱式风力机-甲型-锁链传动.png",
+            "readme": "甲型-锁链传动升级插件",
+            "attribute": {
+                "size": [4, 28, 3]
+            }
+        }, {
+            "name": "甲型-氛围灯插件",
+            "image_src": "柱式风力机-甲型-氛围灯插件.png",
+            "readme": "甲型-氛围灯插件",
+            "attribute": {
+                "size": [7, 1, 7]
+            }
+        }, {
+            "name": "乙型",
+            "image_src": "柱式风力机-乙型.png",
+            "readme": "乙型",
+            "attribute": {
+                "size": [7, 22, 7]
+            }
+        }, {
+            "name": "乙型-锁链传动",
+            "image_src": "柱式风力机-乙型-锁链传动.png",
+            "readme": "乙型-锁链传动",
+            "attribute": {
+                "size": [7, 29, 7]
+            }
+        }, {
+            "name": "乙型-锁链传动升级插件",
+            "image_src": "柱式风力机-乙型-锁链传动.png",
+            "readme": "乙型-锁链传动升级插件",
+            "attribute": {
+                "size": [4, 28, 3]
+            }
+        }, {
+            "name": "乙型-氛围灯插件",
+            "image_src": "柱式风力机-乙型-氛围灯插件.png",
+            "readme": "乙型-氛围灯插件",
+            "attribute": {
+                "size": [7, 1, 7]
+            }
+        }
+    ]
+}

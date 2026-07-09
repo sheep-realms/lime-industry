@@ -54,6 +54,10 @@ body {
     background-color: var(--color-white);
 }
 
+a {
+    text-decoration: none;
+}
+
 hr {
     border: none;
     border-top: 1px solid var(--color-card-border);
@@ -71,6 +75,13 @@ hr {
 
 h1 {
     color: var(--color-lime-700);
+}
+
+.skeleton-box {
+    display: block;
+    background-color: var(--color-slate-50);
+    min-height: 16px;
+    width: 100%;
 }
 
 .h1-subtitle {
@@ -228,6 +239,7 @@ button:disabled {
     padding: 8px 12px; */
     border: 1px solid var(--color-card-border);
     width: 150px;
+    color: var(--color-text-primary);
 }
 
 .result-cover {

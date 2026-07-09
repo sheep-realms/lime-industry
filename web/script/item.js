@@ -92,6 +92,7 @@ $(document).ready(async function() {
     dom.galleryImage.attr('src', getGalleryPath(itemData.cover));
     dom.galleryImage.attr('alt', itemData.title);
 
+    dom.specifications.text('');
     itemData.specifications.forEach(e => {
         dom.specifications.append(`<button class="tag-btn" data-name="${e.name}">${e.name}</button>`);
     });

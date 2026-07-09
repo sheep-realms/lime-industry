@@ -426,16 +426,10 @@ function renderResult(result) {
         "";
 
     for (const item of result) {
-
-        const div =
-            document.createElement(
-                "div"
-            );
-
-        div.className =
-            "result-item";
-
-        div.innerHTML = `
+        const a = document.createElement("a");
+        a.href = `item.html?name=${ item.path }`;
+        a.target = '_blank';
+        a.innerHTML = `<div class="result-item">
             <div class="result-cover">
                 <img src="assets/image/icon/${ item.icon }">
             </div>
@@ -443,11 +437,9 @@ function renderResult(result) {
                 ${item.title}
             </div>
             <div class="result-meta"></div>
-        `;
+        </div>`
 
-        dom.resultList.appendChild(
-            div
-        );
+        dom.resultList.appendChild(a);
     }
 }
 

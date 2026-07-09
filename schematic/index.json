@@ -8,5 +8,15 @@
             "hard_connector",
             "underwater"
         ]
+    },
+    {
+        "title": "柱式风力机",
+        "path": "equipment/柱式风力机",
+        "icon": "柱式风力机-甲型_150px.png",
+        "tags": [
+            "equipment",
+            "stress_source",
+            "wind_stress"
+        ]
     }
 ]
