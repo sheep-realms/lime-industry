@@ -1,0 +1,71 @@
+name: Package Schematic
+
+on:
+    workflow_dispatch:
+
+jobs:
+    package:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Process schematic files
+              shell: bash
+              run: |
+                  set -e
+
+                  SOURCE_DIR="schematic"
+                  OUTPUT_DIR="package"
+
+                  rm -rf "$OUTPUT_DIR"
+                  mkdir -p "$OUTPUT_DIR"
+
+                  cp -r "$SOURCE_DIR"/. "$OUTPUT_DIR"/
+
+                  echo "Processing folder rename..."
+
+                  mapfile -t RENAME_FILES < <(find "$OUTPUT_DIR" -type f -name ".folder-rename" | sort -r)
+
+                  for file in "${RENAME_FILES[@]}"; do
+                      if [ ! -f "$file" ]; then
+                          continue
+                      fi
+
+                      dir="$(dirname "$file")"
+                      parent="$(dirname "$dir")"
+
+                      new_name="$(cat "$file")"
+                      new_name="$(echo "$new_name" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')"
+
+                      if [ -z "$new_name" ]; then
+                          echo "Skipping empty rename: $dir"
+                          rm -f "$file"
+                          continue
+                      fi
+
+                      target="$parent/$new_name"
+
+                      echo "Renaming:"
+                      echo "  $dir -> $target"
+
+                      if [ -e "$target" ]; then
+                          echo "Error: target already exists: $target"
+                          exit 1
+                      fi
+
+                      mv "$dir" "$target"
+                  done
+
+                  echo "Cleaning non-NBT files..."
+
+                  find "$OUTPUT_DIR" -type f ! -name "*.nbt" -delete
+
+                  find "$OUTPUT_DIR" -type d -empty -delete
+
+            - name: Upload artifact
+              uses: actions/upload-artifact@v4
+              with:
+                  name: schematic
+                  path: package
