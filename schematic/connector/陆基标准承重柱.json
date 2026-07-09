@@ -1,25 +1,51 @@
 {
     "title": "陆基标准承重柱",
     "path": "connector/陆基标准承重柱",
-    "cover": "",
     "attribute": {},
-    "tags": ["connector"],
+    "tags": ["connector", "hard_connector", "underwater"],
+    "icon": "陆基标准承重柱-甲型_150px.png",
+    "cover": "陆基标准承重柱-甲型.png",
+    "gallery": [],
     "specifications": [
         {
             "name": "甲型-基段",
-            "image_src": "",
+            "image_src": "陆基标准承重柱-甲型-基段.png",
+            "readme": "",
             "attribute": {
                 "size": [5, 5, 5]
             }
         }, {
             "name": "甲型-中段",
-            "image_src": "",
+            "image_src": "陆基标准承重柱-甲型-中段.png",
+            "readme": "",
             "attribute": {
                 "size": [3, 5, 3]
             }
         }, {
             "name": "甲型-顶段",
-            "image_src": "",
+            "image_src": "陆基标准承重柱-甲型-顶段.png",
+            "readme": "",
+            "attribute": {
+                "size": [5, 5, 5]
+            }
+        }, {
+            "name": "乙型-基段",
+            "image_src": "陆基标准承重柱-乙型-基段.png",
+            "readme": "乙型",
+            "attribute": {
+                "size": [5, 5, 5]
+            }
+        }, {
+            "name": "乙型-中段",
+            "image_src": "陆基标准承重柱-乙型-中段.png",
+            "readme": "乙型",
+            "attribute": {
+                "size": [3, 5, 3]
+            }
+        }, {
+            "name": "乙型-顶段",
+            "image_src": "陆基标准承重柱-乙型-顶段.png",
+            "readme": "乙型",
             "attribute": {
                 "size": [5, 5, 5]
             }

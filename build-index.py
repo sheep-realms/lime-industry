@@ -51,7 +51,7 @@ def create_index():
                 with open(file_path, "r", encoding="utf-8") as f:
                     data = json.load(f)
 
-                if not all(key in data for key in ("title", "path", "cover", "tags")):
+                if not all(key in data for key in ("title", "path", "icon", "tags")):
                     print(f"跳过缺少字段的文件: {relative_path}")
                     continue
 
@@ -68,7 +68,7 @@ def create_index():
                 index_data.append({
                     "title": data["title"],
                     "path": data["path"],
-                    "cover": data["cover"],
+                    "icon": data["icon"],
                     "tags": tags
                 })
 

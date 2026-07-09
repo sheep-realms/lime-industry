@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>检索 | 青柠工业</title>
+
+    <link rel="stylesheet" href="web/style/style.css">
+    <script src="web/class/EchoLiveTools.js"></script>
+    <script src="web/class/DataFilter.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>
+        青柠工业
+        <span class="h1-subtitle">/ 检索</span>
+    </h1>
+
+    <div class="toolbar">
+        <button id="toggle-mode">
+            自定义检索语句
+        </button>
+    </div>
+
+    <div id="normal-search">
+
+        <input
+            id="keyword-input"
+            type="text"
+            placeholder="关键词..."
+        >
+
+        <div id="tag-groups"></div>
+
+    </div>
+
+    <div id="advanced-search" class="hidden">
+
+        <textarea
+            id="query-input"
+            placeholder="检索语句..."
+        ></textarea>
+
+    </div>
+
+    <div class="result-info">
+        共 <span id="result-count">0</span> 个结果
+    </div>
+
+    <div id="result-list"></div>
+
+    <hr class="footer-hr">
+
+</div>
+
+<script src="web/script/search.js"></script>
+
+</body>
+</html>

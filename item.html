@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>载入中... | 产品 | 青柠工业</title>
+    <link rel="stylesheet" href="web/style/style.css">
+    <link rel="stylesheet" href="web/style/item.css">
+    <script src="web/lib/jquery-3.7.1.min.js"></script>
+    <script src="web/lib/marked.min.js"></script>
+    <script src="web/class/EchoLiveTools.js"></script>
+    <script src="web/class/DataFilter.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>
+        青柠工业
+        <span class="h1-subtitle">/ 产品</span>
+        <span class="h1-value-container">[<span id="h1-value">载入中...</span>]</span>
+    </h1>
+
+    <div class="product-container">
+        <section class="product-header-wapper">
+            <div class="gallery-container">
+                <img id="gallery-image" src="" alt="">
+            </div>
+
+            <div class="product-specifications-wapper">
+                <div class="product-specifications-title">产品规格</div>
+                <div id="product-specifications"></div>
+            </div>
+            
+            <button id="btn-download" class="soild" disabled>请选择产品规格</button>
+        </section>
+
+        <section class="product-body-wapper">
+            <div id="product-body"></div>
+        </section>
+    </div>
+
+    <hr class="footer-hr">
+
+</div>
+
+<a id="link-download" href="#" target="_blank" download></a>
+
+<script src="web/script/item.js"></script>
+
+</body>
+</html>

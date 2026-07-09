@@ -2,8 +2,11 @@
     {
         "title": "陆基标准承重柱",
         "path": "connector/陆基标准承重柱",
+        "icon": "陆基标准承重柱-甲型_150px.png",
         "tags": [
-            "connector"
+            "connector",
+            "hard_connector",
+            "underwater"
         ]
     }
 ]
