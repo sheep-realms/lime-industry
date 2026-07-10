@@ -125,6 +125,7 @@ function selectSpecifications(name) {
     renderAttribute();
     if (name === undefined) {
         dom.galleryImage.attr('src', getGalleryPath(itemData.cover));
+        dom.galleryImage.addClass('loading');
         $('#product-body').html(marked.parse(markdownBodyCache.get('_')));
         dom.title.text(itemData.default_readme_title ?? itemData.title);
         return;
@@ -143,6 +144,7 @@ function selectSpecifications(name) {
     } else {
         dom.galleryImage.attr('src', getGalleryPath(itemData.cover));
     }
+    dom.galleryImage.addClass('loading');
 
     const text = markdownBodyCache.get(specification.readme);
     if (text !== undefined) {
@@ -171,6 +173,7 @@ $(document).ready(async function() {
     dom.title.text(itemData.default_readme_title ?? itemData.title);
     dom.galleryImage.attr('src', getGalleryPath(itemData.cover));
     dom.galleryImage.attr('alt', itemData.title);
+    dom.galleryImage.addClass('loading');
 
     dom.specifications.text('');
     itemData.specifications.forEach(e => {
@@ -206,4 +209,8 @@ $(document).on('click', '#product-specifications button', function() {
 
 $(document).on('click', '#btn-download', function() {
     downloadSchematic(selectedSpecification);
+});
+
+$('#gallery-image').on('load', function() {
+    dom.galleryImage.removeClass('loading');
 });
