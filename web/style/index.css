@@ -1,0 +1,21 @@
+h1 {
+    text-align: center;
+    font-size: 48px;
+    margin-top: 20vh;
+}
+
+.index-h1-subtitle {
+    text-align: center;
+    color: var(--color-text-regular);
+    font-size: 24px;
+    margin: 0;
+    font-weight: 300;
+}
+
+#btn-index-start {
+    margin: 3rem auto 20vh auto;
+    display: block;
+    width: 256px;
+    height: 48px;
+    font-size: 20px;
+}

@@ -32,6 +32,11 @@
         "title": "生产设备",
         "parent": "equipment"
     }, {
+        "name": "converter",
+        "sort_name": "11",
+        "title": "转换器",
+        "parent": "equipment"
+    }, {
         "name": "hard_connector",
         "sort_name": "30",
         "title": "硬连接",

@@ -1,0 +1,44 @@
+{
+    "title": "转速转换器",
+    "default_readme_title": "转速转换器-四倍",
+    "path": "equipment/转速转换器",
+    "attribute": {},
+    "tags": ["equipment", "converter"],
+    "icon": "转速转换器-四倍_150px.png",
+    "cover": "转速转换器-四倍.png",
+    "use_default_attribute": true,
+    "gallery": [],
+    "specifications": [
+        {
+            "name": "四倍",
+            "image_src": "转速转换器-四倍.png",
+            "readme": "",
+            "attribute": {
+                "size": [8, 5, 7]
+            }
+        }, {
+            "name": "水面-四倍",
+            "image_src": "水面转速转换器-四倍.png",
+            "download_url": "水面转速转换器-四倍",
+            "readme": "",
+            "attribute": {
+                "size": [8, 5, 7]
+            }
+        }, {
+            "name": "可调节",
+            "image_src": "转速转换器-可调节.png",
+            "readme": "可调节",
+            "attribute": {
+                "size": [8, 6, 7]
+            }
+        }, {
+            "name": "水面-可调节",
+            "image_src": "水面转速转换器-可调节.png",
+            "download_url": "水面转速转换器-可调节",
+            "readme": "可调节",
+            "attribute": {
+                "size": [8, 6, 7]
+            }
+        }
+    ]
+}

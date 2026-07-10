@@ -1,0 +1,25 @@
+{
+    "title": "水面便携被动式蒸汽锅炉",
+    "path": "equipment/水面便携被动式蒸汽锅炉",
+    "attribute": {
+        "cold_start_load_stress": 128,
+        "output_rpm": 16,
+        "output_stress": 1920,
+        "size": [8, 7, 5]
+    },
+    "tags": ["equipment", "stress_source", "steam_stress"],
+    "icon": "水面便携被动式蒸汽锅炉_150px.png",
+    "cover": "水面便携被动式蒸汽锅炉.png",
+    "use_default_attribute": true,
+    "gallery": [],
+    "specifications": [
+        {
+            "name": "水面便携被动式蒸汽锅炉",
+            "image_src": "",
+            "download_url": "水面便携被动式蒸汽锅炉",
+            "readme": "",
+            "unique": true,
+            "attribute": {}
+        }
+    ]
+}

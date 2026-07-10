@@ -18,5 +18,24 @@
             "stress_source",
             "wind_stress"
         ]
+    },
+    {
+        "title": "水面便携被动式蒸汽锅炉",
+        "path": "equipment/水面便携被动式蒸汽锅炉",
+        "icon": "水面便携被动式蒸汽锅炉_150px.png",
+        "tags": [
+            "equipment",
+            "stress_source",
+            "steam_stress"
+        ]
+    },
+    {
+        "title": "转速转换器",
+        "path": "equipment/转速转换器",
+        "icon": "转速转换器-四倍_150px.png",
+        "tags": [
+            "equipment",
+            "converter"
+        ]
     }
 ]

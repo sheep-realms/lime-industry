@@ -7,9 +7,46 @@ if (ITEM_NAME === null) {
 }
 
 const dom = {
+    attribute: $('#product-attribute'),
     galleryImage: $('#gallery-image'),
-    specifications: $('#product-specifications')
+    specifications: $('#product-specifications'),
+    title: $('#product-title'),
 }
+
+const SCHEMATIC_ATTRIBUTE = {
+    cold_start_load_stress: {
+        title: '冷启动应力负载',
+        template: v => `${v} su`
+    },
+    load_stress: {
+        title: '应力负载',
+        template: v => `${v} su`
+    },
+    input_rpm_max: {
+        title: '最高输入转速',
+        template: v => `${v} RPM`
+    },
+    input_rpm_min: {
+        title: '最低输入转速',
+        template: v => `${v} RPM`
+    },
+    input_rpm_reference: {
+        title: '基准输入转速',
+        template: v => `${v} RPM`
+    },
+    output_stress: {
+        title: '输出应力',
+        template: v => `${v} su`
+    },
+    output_rpm: {
+        title: '输出转速',
+        template: v => `${v} RPM`
+    },
+    size: {
+        title: '尺寸',
+        template: v => `${v[0]} × ${v[1]} × ${v[2]} B`
+    }
+};
 
 let itemData;
 let selectedSpecification;
@@ -54,16 +91,52 @@ function getSpecification(name) {
     return itemData.specifications.find(e => e.name === name);
 }
 
+function getAttribute(specificationName) {
+    let attr = itemData.attribute;
+    if (specificationName === undefined) {
+        if (!itemData.use_default_attribute) return attr;
+        specificationName = itemData.specifications[0].name;
+    }
+    const s = getSpecification(specificationName);
+    if (s === undefined) return attr;
+    attr = {
+        ...attr,
+        ...s.attribute
+    }
+    return attr;
+}
+
+function renderAttribute() {
+    dom.attribute.text('');
+    const attr = getAttribute(selectedSpecification);
+    for (const key in SCHEMATIC_ATTRIBUTE) {
+        if (!Object.hasOwn(SCHEMATIC_ATTRIBUTE, key)) continue;
+        if (attr[key] === undefined) continue;
+        const element = SCHEMATIC_ATTRIBUTE[key];
+        dom.attribute.append(`<dl>
+                <dt>${ element.title }</dt>
+                <dd>${ element.template(attr[key]) }</dd>
+            </dl>`);
+    }
+}
+
 function selectSpecifications(name) {
     selectedSpecification = name;
+    renderAttribute();
     if (name === undefined) {
         dom.galleryImage.attr('src', getGalleryPath(itemData.cover));
         $('#product-body').html(marked.parse(markdownBodyCache.get('_')));
+        dom.title.text(itemData.default_readme_title ?? itemData.title);
         return;
     }
     
     const specification = getSpecification(name);
     if (specification === undefined) return;
+    if (specification.unique) {
+        dom.title.text(itemData.title);
+    } else {
+        dom.title.text(`${ itemData.title }-${ specification.name }`);
+    }
 
     if (specification.image_src) {
         dom.galleryImage.attr('src', getGalleryPath(specification.image_src));
@@ -81,21 +154,30 @@ function selectSpecifications(name) {
 
 async function downloadSchematic(name) {
     const specification = getSpecification(name);
-    const path = `schematic/${ itemData.path }-${ specification.name }.nbt`;
+    let path = `schematic/${ itemData.path }-${ specification.name }.nbt`;
+    if (specification.download_url !== undefined) {
+        let p = itemData.path.split('/');
+        p.pop();
+        path = `schematic/${ p.join('/') }/${ specification.download_url }.nbt`;
+    }
     window.open(path);
 }
 
 $(document).ready(async function() {
     itemData = await loadJson(`schematic/${ ITEM_NAME }.json`);
+    Object.freeze(itemData);
     $('head title').text(`${ itemData.title } | 产品 | 青柠工业`)
     $("#h1-value").text(itemData.title);
+    dom.title.text(itemData.default_readme_title ?? itemData.title);
     dom.galleryImage.attr('src', getGalleryPath(itemData.cover));
     dom.galleryImage.attr('alt', itemData.title);
 
     dom.specifications.text('');
     itemData.specifications.forEach(e => {
-        dom.specifications.append(`<button class="tag-btn" data-name="${e.name}">${e.name}</button>`);
+        dom.specifications.append(`<button data-name="${e.name}">${e.name}</button>`);
     });
+
+    renderAttribute();
 
     try {
         const markdownBody = await loadText(`schematic/${ ITEM_NAME }.md`);

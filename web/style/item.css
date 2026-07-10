@@ -56,6 +56,38 @@
     /* color: var(--color-lime-950); */
 }
 
+#product-attribute dl {
+    display: flex;
+    align-items: stretch;
+    margin: 0;
+    gap: 16px;
+    border-top: 1px solid var(--color-card-border);
+    border-bottom: 1px solid var(--color-card-border);
+    min-height: 2.5rem;
+}
+
+#product-attribute dl+dl {
+    border-top: none;
+}
+
+#product-attribute dt {
+    flex: 1;
+    min-width: 9rem;
+    background-color: var(--color-slate-50);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+#product-attribute dd {
+    flex: 3;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 #product-body {
     padding-right: 16px;
     color: var(--color-text-primary);
