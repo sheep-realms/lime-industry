@@ -276,6 +276,8 @@ button:disabled {
     background-image: radial-gradient(transparent 1px, var(--color-slate-50) 1px);
     background-size: 16px 16px;
     background-position: center center;
+    height: 150px;
+    width: 150px;
 }
 
 .result-title {
