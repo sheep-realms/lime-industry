@@ -13,6 +13,10 @@ const dom = {
     title: $('#product-title'),
 }
 
+const MOD_TITLE = {
+    create_aeronautics: '机械动力：航空学'
+};
+
 const SCHEMATIC_ATTRIBUTE = {
     cold_start_load_stress: {
         title: '冷启动应力负载',
@@ -45,6 +49,16 @@ const SCHEMATIC_ATTRIBUTE = {
     size: {
         title: '尺寸',
         template: v => `${v[0]} × ${v[1]} × ${v[2]} B`
+    },
+    mods: {
+        title: '需要模组',
+        template: v => {
+            let t = [];
+            v.forEach(e => {
+                t.push(MOD_TITLE[v] ?? v);
+            });
+            return t.join('，');
+        }
     }
 };
 

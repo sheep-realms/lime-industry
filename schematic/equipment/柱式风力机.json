@@ -40,7 +40,8 @@
             "image_src": "柱式风力机-甲型-氛围灯插件.png",
             "readme": "甲型-氛围灯插件",
             "attribute": {
-                "size": [7, 1, 7]
+                "size": [7, 1, 7],
+                "mods": ["create_aeronautics"]
             }
         }, {
             "name": "乙型",
@@ -73,7 +74,8 @@
             "image_src": "柱式风力机-乙型-氛围灯插件.png",
             "readme": "乙型-氛围灯插件",
             "attribute": {
-                "size": [7, 1, 7]
+                "size": [7, 1, 7],
+                "mods": ["create_aeronautics"]
             }
         }
     ]
