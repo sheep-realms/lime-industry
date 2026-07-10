@@ -4,6 +4,12 @@
     align-items: flex-start;
 }
 
+@media screen and (max-width: 800px) {
+    .product-container {
+        flex-direction: column;
+    }
+}
+
 .product-header-wapper {
     flex: 1;
     min-width: 300px;
@@ -22,10 +28,10 @@
     align-items: center;
     justify-content: center;
     aspect-ratio: 1 / 1;
-    background-color: #4b5563;
-    background-image: radial-gradient(transparent 1px, #f8fafc 1px);
+    background-color: var(--color-slate-300);
+    background-image: radial-gradient(transparent 1px, var(--color-slate-50) 1px);
     background-size: 32px 32px;
-    background-position: center top;
+    background-position: center center;
 }
 
 .gallery-container img {

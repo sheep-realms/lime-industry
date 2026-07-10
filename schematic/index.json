@@ -1,5 +1,13 @@
 [
     {
+        "title": "柱式动力源底座",
+        "path": "component/柱式动力源底座",
+        "icon": "柱式动力源底座-甲型_150px.png",
+        "tags": [
+            "component"
+        ]
+    },
+    {
         "title": "陆基标准承重柱",
         "path": "connector/陆基标准承重柱",
         "icon": "陆基标准承重柱-甲型_150px.png",

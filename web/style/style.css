@@ -271,6 +271,11 @@ button:disabled {
     display: flex;
     align-items: center;
     justify-content: center;
+    /* background-color: var(--color-slate-50); */
+    background-color: var(--color-slate-200);
+    background-image: radial-gradient(transparent 1px, var(--color-slate-50) 1px);
+    background-size: 16px 16px;
+    background-position: center center;
 }
 
 .result-title {

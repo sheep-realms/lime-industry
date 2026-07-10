@@ -1,0 +1,26 @@
+{
+    "title": "柱式动力源底座",
+    "default_readme_title": "柱式动力源底座-甲型",
+    "path": "component/柱式动力源底座",
+    "attribute": {
+        "size": [7, 5, 7]
+    },
+    "tags": ["component"],
+    "icon": "柱式动力源底座-甲型_150px.png",
+    "cover": "柱式动力源底座-甲型.png",
+    "use_default_attribute": true,
+    "gallery": [],
+    "specifications": [
+        {
+            "name": "甲型",
+            "image_src": "柱式动力源底座-甲型.png",
+            "readme": "",
+            "attribute": {}
+        }, {
+            "name": "乙型",
+            "image_src": "柱式动力源底座-乙型.png",
+            "readme": "乙型",
+            "attribute": {}
+        }
+    ]
+}

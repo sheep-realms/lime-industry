@@ -10,7 +10,6 @@
     "tags": ["equipment", "stress_source", "steam_stress"],
     "icon": "水面便携被动式蒸汽锅炉_150px.png",
     "cover": "水面便携被动式蒸汽锅炉.png",
-    "use_default_attribute": true,
     "gallery": [],
     "specifications": [
         {
