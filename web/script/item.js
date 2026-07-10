@@ -65,6 +65,7 @@ const SCHEMATIC_ATTRIBUTE = {
 let itemData;
 let selectedSpecification;
 let markdownBodyCache = new Map();
+let imageLoadingTimer = 0;
 
 async function loadJson(path) {
     const response = await fetch(path);
@@ -134,12 +135,18 @@ function renderAttribute() {
     }
 }
 
+function setGalleryImage(path) {
+    dom.galleryImage.attr('src', path);
+    imageLoadingTimer = setTimeout(() => {
+        dom.galleryImage.addClass('loading');
+    }, 300);
+}
+
 function selectSpecifications(name) {
     selectedSpecification = name;
     renderAttribute();
     if (name === undefined) {
-        dom.galleryImage.attr('src', getGalleryPath(itemData.cover));
-        dom.galleryImage.addClass('loading');
+        setGalleryImage(getGalleryPath(itemData.cover));
         $('#product-body').html(marked.parse(markdownBodyCache.get('_')));
         dom.title.text(itemData.default_readme_title ?? itemData.title);
         return;
@@ -154,11 +161,10 @@ function selectSpecifications(name) {
     }
 
     if (specification.image_src) {
-        dom.galleryImage.attr('src', getGalleryPath(specification.image_src));
+        setGalleryImage(getGalleryPath(specification.image_src));
     } else {
-        dom.galleryImage.attr('src', getGalleryPath(itemData.cover));
+        setGalleryImage(getGalleryPath(itemData.cover));
     }
-    dom.galleryImage.addClass('loading');
 
     const text = markdownBodyCache.get(specification.readme);
     if (text !== undefined) {
@@ -185,9 +191,8 @@ $(document).ready(async function() {
     $('head title').text(`${ itemData.title } | 产品 | 青柠工业`)
     $("#h1-value").text(itemData.title);
     dom.title.text(itemData.default_readme_title ?? itemData.title);
-    dom.galleryImage.attr('src', getGalleryPath(itemData.cover));
     dom.galleryImage.attr('alt', itemData.title);
-    dom.galleryImage.addClass('loading');
+    setGalleryImage(getGalleryPath(itemData.cover));
 
     dom.specifications.text('');
     itemData.specifications.forEach(e => {
@@ -226,5 +231,6 @@ $(document).on('click', '#btn-download', function() {
 });
 
 $('#gallery-image').on('load', function() {
+    clearTimeout(imageLoadingTimer);
     dom.galleryImage.removeClass('loading');
 });
