@@ -84,6 +84,7 @@
     justify-content: flex-start;
     align-items: center;
     padding-left: 1rem;
+    color: var(--color-text-regular);
 }
 
 #product-attribute dd {
@@ -92,6 +93,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    color: var(--color-text-primary);
 }
 
 #product-body {
