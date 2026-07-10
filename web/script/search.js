@@ -431,7 +431,7 @@ function renderResult(result) {
         a.target = '_blank';
         a.innerHTML = `<div class="result-item">
             <div class="result-cover">
-                <img src="assets/image/icon/${ item.icon }">
+                <img src="assets/image/icon/${ item.icon }" loading="lazy">
             </div>
             <div class="result-title">
                 ${item.title}
