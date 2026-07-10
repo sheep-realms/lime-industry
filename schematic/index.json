@@ -34,7 +34,8 @@
         "tags": [
             "equipment",
             "stress_source",
-            "steam_stress"
+            "steam_stress",
+            "water_surface"
         ]
     },
     {
@@ -43,7 +44,8 @@
         "icon": "转速转换器-四倍_150px.png",
         "tags": [
             "equipment",
-            "converter"
+            "converter",
+            "water_surface"
         ]
     }
 ]

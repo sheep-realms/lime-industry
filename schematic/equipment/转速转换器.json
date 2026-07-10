@@ -3,7 +3,7 @@
     "default_readme_title": "转速转换器-四倍",
     "path": "equipment/转速转换器",
     "attribute": {},
-    "tags": ["equipment", "converter"],
+    "tags": ["equipment", "converter", "water_surface"],
     "icon": "转速转换器-四倍_150px.png",
     "cover": "转速转换器-四倍.png",
     "use_default_attribute": true,

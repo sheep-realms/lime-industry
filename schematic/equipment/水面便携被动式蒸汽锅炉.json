@@ -7,7 +7,7 @@
         "output_stress": 1920,
         "size": [8, 7, 5]
     },
-    "tags": ["equipment", "stress_source", "steam_stress"],
+    "tags": ["equipment", "stress_source", "steam_stress", "water_surface"],
     "icon": "水面便携被动式蒸汽锅炉_150px.png",
     "cover": "水面便携被动式蒸汽锅炉.png",
     "gallery": [],
