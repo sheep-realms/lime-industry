@@ -90,6 +90,11 @@ h1 {
     width: 100%;
 }
 
+.skeleton-box.inline-block {
+    display: inline-block;
+    min-width: 16px;
+}
+
 .h1-subtitle {
     font-weight: 400;
     color: var(--color-text-regular);
