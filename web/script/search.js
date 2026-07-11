@@ -385,6 +385,13 @@ function getChildTags(tagName) {
 
 async function loadAllData() {
     const result = await loadJson(`schematic/index.json`);
+
+    result.sort((a, b) => {
+        return (a.sort_name ?? a.title).localeCompare(
+            b.sort_name ?? b.title,
+            "zh-CN"
+        );
+    });
     return result;
 }
 

@@ -1,0 +1,28 @@
+{
+    "title": "垂直轴十字风力机叶片",
+    "default_readme_title": "垂直轴十字风力机叶片-甲型",
+    "path": "component/垂直轴十字风力机叶片",
+    "attribute": {
+        "output_rpm": 16,
+        "output_stress": 8192,
+        "size": [5, 18, 5]
+    },
+    "tags": ["component"],
+    "icon": "垂直轴十字风力机叶片-甲型_150px.png",
+    "cover": "垂直轴十字风力机叶片-甲型.png",
+    "use_default_attribute": true,
+    "gallery": [],
+    "specifications": [
+        {
+            "name": "甲型",
+            "image_src": "垂直轴十字风力机叶片-甲型.png",
+            "readme": "",
+            "attribute": {}
+        }, {
+            "name": "乙型",
+            "image_src": "垂直轴十字风力机叶片-乙型.png",
+            "readme": "乙型",
+            "attribute": {}
+        }
+    ]
+}

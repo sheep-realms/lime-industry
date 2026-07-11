@@ -65,12 +65,17 @@ def create_index():
                     if tag not in tags:
                         tags.append(tag)
 
-                index_data.append({
+                itemData = {
                     "title": data["title"],
                     "path": data["path"],
                     "icon": data["icon"],
                     "tags": tags
-                })
+                }
+
+                if "sort_name" in data:
+                    itemData["sort_name"] = data["sort_name"]
+
+                index_data.append(itemData)
 
             except json.JSONDecodeError:
                 print(f"跳过无效 JSON 文件: {relative_path}")

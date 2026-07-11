@@ -89,8 +89,14 @@ async function loadSpecificationsMarkdown(data) {
     if (markdownBodyCache.has(data.readme)) return;
     markdownBodyCache.set(data.readme, '');
     const name = data.name;
+    let readmePath = `schematic/${ itemData.path }-${ data.readme }.md`;
+    if (data.readme.startsWith(':')) {
+        let p = itemData.path.split('/');
+        p.pop();
+        readmePath = `schematic/${ p.join('/') }/${ data.readme.substring(1) }.md`;
+    }
     try {
-        const markdown = await loadText(`schematic/${ itemData.path }-${ data.readme }.md`);
+        const markdown = await loadText(readmePath);
         markdownBodyCache.set(data.readme, markdown);
     } catch (error) {
         markdownBodyCache.delete(data.readme);
@@ -157,7 +163,7 @@ function selectSpecifications(name) {
     if (specification.unique) {
         dom.title.text(itemData.title);
     } else {
-        dom.title.text(`${ itemData.title }-${ specification.name }`);
+        dom.title.text(specification.readme_title ?? `${ itemData.title }-${ specification.name }`);
     }
 
     if (specification.image_src) {

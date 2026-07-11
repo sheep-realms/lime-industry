@@ -1,0 +1,37 @@
+{
+    "title": "水下陆基锚固标准基座",
+    "default_readme_title": "水下陆基锚固标准基座-甲型",
+    "path": "connector/水下陆基锚固标准基座",
+    "attribute": {},
+    "tags": ["connector", "soft_connector", "underwater"],
+    "icon": "水下陆基锚固标准基座-甲型_150px.png",
+    "cover": "水下陆基锚固标准基座-甲型.png",
+    "use_default_attribute": true,
+    "gallery": [],
+    "specifications": [
+        {
+            "name": "甲型",
+            "image_src": "水下陆基锚固标准基座-甲型.png",
+            "readme": "",
+            "attribute": {
+                "size": [9, 5, 9]
+            }
+        }, {
+            "name": "乙型",
+            "image_src": "水下陆基锚固标准基座-乙型.png",
+            "readme": "乙型",
+            "attribute": {
+                "size": [9, 5, 9]
+            }
+        }, {
+            "name": "连接件",
+            "image_src": "水下陆基锚固标准连接件.png",
+            "readme": ":水下陆基锚固标准连接件",
+            "readme_title": "水下陆基锚固标准连接件",
+            "download_url": "水下陆基锚固标准连接件",
+            "attribute": {
+                "size": [5, 3, 5]
+            }
+        }
+    ]
+}
