@@ -587,7 +587,7 @@ async function init() {
                 name: "main",
                 type: "string",
                 map: {
-                    value: ["title", "author"]
+                    value: ["title"]
                 }
             }
         ],
